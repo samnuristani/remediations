@@ -3,9 +3,10 @@
     Remediates STIG ID: WIN10-SO-000030.
 
 .DESCRIPTION
-    Ensures the setting "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" is Enabled.
-    This allows detailed subcategory-level auditing via AuditPol.exe to take effect.
-
+    This STIG requires that the setting: "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" to be Enabled.
+    This setting ensures that granular audit policy subcategories (managed via AuditPol.exe) take precedence over the broader, legacy audit settings configured via Group Policy.
+    This allows detailed subcategory-level auditing via AuditPol.exe to take effect. 
+ 
 .NOTES
     STIG ID: WIN10-SO-000030
     Registry Path: HKLM\System\CurrentControlSet\Control\Lsa
