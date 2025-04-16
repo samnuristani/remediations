@@ -2,6 +2,17 @@
 .SYNOPSIS
     Remediates STIG ID: WN10-AU-000560.
 
+.NOTEs
+.NOTES
+    Author          : Sam Nuristani
+    GitHub          : https://github.com/samnuristani
+    Date Created    : 2025-04-15
+    Last Modified   : 2025-04-15
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-AU-000560
+
 .DESCRIPTION
     Configures auditing for "Other Logon/Logoff Events" to audit both Success and Failure.
     Verifies the setting and reports compliance status.
