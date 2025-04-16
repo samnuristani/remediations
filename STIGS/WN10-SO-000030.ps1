@@ -1,24 +1,23 @@
-<#
+ <#
 .SYNOPSIS
-    Remediates STIG ID: WIN10-SO-000030.
+    Remediates STIG ID: WN10-SO-000030.
 
 .DESCRIPTION
-    This STIG requires that the setting: "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" to be Enabled.
-    This setting ensures that granular audit policy subcategories (managed via AuditPol.exe) take precedence over the broader, legacy audit settings configured via Group Policy.
-    This allows detailed subcategory-level auditing via AuditPol.exe to take effect. 
- 
+    Ensures the setting "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" is Enabled.
+    This allows detailed subcategory-level auditing via AuditPol.exe to take effect.
+
 .NOTES
-    STIG ID: WIN10-SO-000030
+    STIG ID: WN10-SO-000030
     Registry Path: HKLM\System\CurrentControlSet\Control\Lsa
     Value Name: SCENoApplyLegacyAuditPolicy
-    Value Data: 0 (enabled)
+    Value Data: 1 (enabled)
 #>
 
 Write-Host "Remediating STIG ID: WIN10-SO-000030..." -ForegroundColor Cyan
 
 $regPath = "HKLM:\System\CurrentControlSet\Control\Lsa"
 $valueName = "SCENoApplyLegacyAuditPolicy"
-$desiredValue = 0
+$desiredValue = 1
 
 try {
     # Set the registry value
