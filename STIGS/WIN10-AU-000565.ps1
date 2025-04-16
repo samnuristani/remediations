@@ -13,7 +13,7 @@
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
-    STIG-ID         : WIN10-AU-000565
+    STIG-ID         : WN10-AU-000565
 
 .TESTED ON
     Date(s) Tested  : 
@@ -24,7 +24,7 @@
 .USAGE
     Put any usage instructions here.
     Example syntax:
-    PS C:\> .\STIG-ID-WIN10-AU-000565.ps1 
+    PS C:\> .\STIG-ID-WN10-AU-000565.ps1 
 #>
 
 # Ensure script is run as Administrator
@@ -42,4 +42,3 @@ auditpol.exe /set /subcategory:"Other Logon/Logoff Events" /failure:enable
 # Confirm the change
 Write-Host "`nCurrent Audit Policy:" -ForegroundColor Green
 auditpol.exe /get /subcategory:"Other Logon/Logoff Events"
- 
